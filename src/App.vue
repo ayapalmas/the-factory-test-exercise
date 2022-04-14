@@ -3,5 +3,5 @@ import HelloWorld from './components/HelloWorld.vue';
 </script>
 
 <template>
-  <HelloWorld msg="the-factory-test-exercise" />
+  <HelloWorld msg="The Factory test exercise!" />
 </template>
