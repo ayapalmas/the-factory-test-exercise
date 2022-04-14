@@ -1,3 +1,3 @@
-# vitejs-vite-5uykk4
+# the-factory-test-excercise
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-5uykk4)
+Test excercise to get employed by The Factory.
