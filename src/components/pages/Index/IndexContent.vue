@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import SearchBar from '../../shared/SearchBar.vue';
 import Hero from "../../shared/Hero.vue";
-import Container from "../../shared/Container.vue"
+import Container from "../../shared/Container.vue";
+
+
+
+
 </script>
 
 <template>

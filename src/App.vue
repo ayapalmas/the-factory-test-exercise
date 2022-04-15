@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import BaseLayout from "./components/shared/BaseLayout.vue"
+import BaseLayout from "./components/shared/BaseLayout.vue";
 </script>
 
 <template>
   <BaseLayout>
     <template #navigation>
-      <router-view name="navigation"></router-view>
+      <RouterView name="navigation"></RouterView>
     </template>
     <template #content>
-      <router-view name="content"></router-view>
+      <RouterView name="content"></RouterView>
     </template>
   </BaseLayout>
 </template>
