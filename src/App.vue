@@ -1,7 +1,14 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
+import BaseLayout from "./components/shared/BaseLayout.vue"
 </script>
 
 <template>
-  <HelloWorld msg="The Factory test exercise!" />
+  <BaseLayout>
+    <template #navigation>
+      <router-view name="navigation"></router-view>
+    </template>
+    <template #content>
+      <router-view name="content"></router-view>
+    </template>
+  </BaseLayout>
 </template>
