@@ -139,7 +139,7 @@ const handleLike = () => {
             </div>
           </div>
           <img
-            class="w-full rounded shadow-2xl shadow-black"
+            class="w-full aspect-video object-cover object-center rounded shadow-2xl shadow-black"
             :src="imageAttrs.src"
             :alt="imageAttrs.alt"
           />
