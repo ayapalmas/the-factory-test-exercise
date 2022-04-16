@@ -1,3 +1,3 @@
-type SVGName = "search" | "heart" | "search-black";
+type SVGName = "search" | "heart" | "download";
 
 export default SVGName;

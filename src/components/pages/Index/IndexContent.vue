@@ -27,9 +27,10 @@ const getRandomPhotos = async () => {
   );
 
   imageProps.value = result.data.map(
-    (e: { urls: { regular: string }; description: string }) => ({
+    (e: { urls: { regular: string }; description: string; id: string }) => ({
       src: e.urls.regular,
       alt: e.description,
+      id: e.id,
     })
   );
 };

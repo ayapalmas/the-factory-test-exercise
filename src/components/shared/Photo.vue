@@ -7,12 +7,12 @@ type PhotoProps = {
   id: string;
 };
 
-const { src, alt } = defineProps<PhotoProps>();
+const { src, alt, id } = defineProps<PhotoProps>();
 </script>
 
 <template>
   <router-link
-    :to="`/${id}`"
+    :to="`/details/${id}`"
     class="rounded-md bg-slate-100 w-full aspect-square overflow-hidden hover:scale-110"
   >
     <img class="object-cover object-center w-full h-full" :src="src" :alt="alt" />
