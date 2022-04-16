@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
 import axios from "axios";
 
 const result = await axios.get(
@@ -10,8 +8,6 @@ const result = await axios.get(
 );
 
 const url = result.data.urls.regular;
-
-console.log(url);
 </script>
 
 <template>
