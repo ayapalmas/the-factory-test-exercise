@@ -3,7 +3,7 @@ import { defineProps } from "vue";
 
 type PhotoProps = {
   src: string;
-  alt: string;
+  alt?: string;
   id: string;
 };
 

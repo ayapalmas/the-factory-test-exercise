@@ -3,6 +3,7 @@ import { watch, ref } from "vue";
 import { useRoute } from "vue-router";
 import axios from "axios";
 
+import { store } from "../../../store";
 import Container from "../../shared/Container.vue";
 import SVG from "../../shared/SVG.vue";
 
@@ -12,6 +13,7 @@ const imageAttrs = ref<ImageAttrs>({ src: "", alt: "" });
 const userImageAttrs = ref<ImageAttrs>({ src: "", alt: "" });
 const userInfo = ref<UserInfo>({ name: "", link: "" });
 const downloadLink = ref<string>("");
+const isLiked = ref<boolean>(false);
 
 type UserInfo = {
   name: string;
@@ -54,11 +56,30 @@ const fetchImageAtts = async () => {
 watch(
   () => route.params.id,
   async () => {
-    console.log(route.params.id);
-    await fetchImageAtts();
+    if (route.params.id) {
+      await fetchImageAtts();
+
+      if (store.favoriteImageIds.includes(route.params.id.toString())) {
+        isLiked.value = true;
+      }
+    }
   },
   { immediate: true }
 );
+
+const handleLike = () => {
+  if (isLiked.value) {
+    store.favoriteImageIds = store.favoriteImageIds.filter(
+      (e) => e !== route.params.id.toString()
+    );
+
+    console.log(store.favoriteImageIds);
+    isLiked.value = false;
+  } else {
+    store.favoriteImageIds = [route.params.id.toString(), ...store.favoriteImageIds];
+    isLiked.value = true;
+  }
+};
 </script>
 
 <template>
@@ -96,7 +117,10 @@ watch(
             </div>
             <div class="flex flex-row gap-2">
               <button
-                class="drop-shadow aspect-square h-6 rounded flex flex-col justify-center items-center bg-white"
+                @click="handleLike"
+                :class="`drop-shadow aspect-square h-6 rounded flex flex-col justify-center items-center ${
+                  isLiked ? 'bg-red-600 text-white' : 'bg-white'
+                } `"
               >
                 <span class="aspect-square h-4">
                   <SVG name="heart" />
