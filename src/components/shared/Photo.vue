@@ -13,7 +13,7 @@ const { src, alt, id } = defineProps<PhotoProps>();
 <template>
   <router-link
     :to="`/details/${id}`"
-    class="rounded-md bg-slate-100 w-full aspect-square overflow-hidden hover:scale-110"
+    class="rounded-md bg-slate-100 w-full aspect-square overflow-hidden"
   >
     <img class="object-cover object-center w-full h-full" :src="src" :alt="alt" />
   </router-link>
