@@ -10,6 +10,7 @@ import Photo from "../../shared/Photo.vue";
 type ImageProp = {
   src: string;
   alt: string;
+  id: string;
 };
 
 const imageProps = ref<ImageProp[]>([]);
@@ -44,7 +45,12 @@ const getRandomPhotos = async () => {
   </Hero>
   <Container>
     <div class="grid gap-4 grid-cols-1 sm:grid-cols-3 pt-4">
-      <Photo v-for="imageProp in imageProps" :src="imageProp.src" :alt="imageProp.alt" />
+      <Photo
+        v-for="imageProp in imageProps"
+        :id="imageProp.id"
+        :src="imageProp.src"
+        :alt="imageProp.alt"
+      />
     </div>
   </Container>
 </template>
