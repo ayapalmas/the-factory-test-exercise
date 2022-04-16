@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Container from "../../shared/Container.vue";
+</script>
+
 <template>
-  <h1>Подробно</h1>
+  <Container></Container>
 </template>
