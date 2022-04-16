@@ -45,7 +45,7 @@ const getRandomPhotos = async () => {
     </Container>
   </Hero>
   <Container>
-    <div class="grid gap-4 grid-cols-1 sm:grid-cols-3 pt-4">
+    <div class="grid gap-4 grid-cols-1 sm:grid-cols-3 py-4">
       <Photo
         v-for="imageProp in imageProps"
         :id="imageProp.id"

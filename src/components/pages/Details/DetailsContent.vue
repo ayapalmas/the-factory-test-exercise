@@ -67,7 +67,7 @@ watch(
       <di class="absolute t-0 w-full h-72 overflow-hidden">
         <div class="absolute t-0 w-full h-72 bg-gray-400"></div>
         <img
-          class="absolute scale-150 t-0 blur-sm w-full h-72 brightness-150 grayscale object-cover object-center"
+          class="absolute scale-110 t-0 blur-sm w-full h-72 brightness-150 grayscale object-cover object-center"
           :src="imageAttrs.src"
           :alt="imageAttrs.alt"
         />
