@@ -64,15 +64,15 @@ watch(
 <template>
   <div class="relative">
     <div class="hidden sm:block relative">
-      <di class="absolute t-0 w-full h-72 overflow-hidden">
-        <div class="absolute t-0 w-full h-72 bg-gray-400"></div>
+      <div class="absolute t-0 w-full h-72 overflow-hidden">
+        <div class="absolute t-0 w-full h-72 bg-gray-400 animate-pulse"></div>
         <img
           class="absolute scale-110 t-0 blur-sm w-full h-72 brightness-150 grayscale object-cover object-center"
           :src="imageAttrs.src"
           :alt="imageAttrs.alt"
         />
         <div class="absolute t-0 w-full h-72 bg-gray-500 opacity-25"></div>
-      </di>
+      </div>
     </div>
     <div class="absolute t-0 w-full py-4 bg-transparent">
       <Container>
@@ -80,7 +80,7 @@ watch(
           <div class="flex flex-row items-center justify-between">
             <div class="flex flex-row items-center gap-2">
               <img
-                class="aspect-square w-8 rounded object-cover object-center"
+                class="aspect-square w-8 rounded object-cover object-center bg-gray-400"
                 :src="userImageAttrs.src"
                 :alt="userImageAttrs.alt"
               />
@@ -110,7 +110,7 @@ watch(
                 <span class="aspect-square h-4">
                   <SVG name="download" />
                 </span>
-                <span>Download</span>
+                <span>Скачать</span>
               </a>
             </div>
           </div>
